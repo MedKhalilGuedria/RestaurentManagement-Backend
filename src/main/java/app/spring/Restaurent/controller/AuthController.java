@@ -1,8 +1,8 @@
-package app.spring.tax.controller;
+package app.spring.Restaurent.controller;
 
-import app.spring.tax.config.JwtUtil;
-import app.spring.tax.models.User;
-import app.spring.tax.services.UserService;
+import app.spring.Restaurent.config.JwtUtil;
+import app.spring.Restaurent.models.User;
+import app.spring.Restaurent.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

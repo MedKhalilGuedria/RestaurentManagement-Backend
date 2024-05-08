@@ -1,7 +1,7 @@
-package app.spring.tax.services;
+package app.spring.Restaurent.services;
 
-import app.spring.tax.models.User;
-import app.spring.tax.repository.UserRepository;
+import app.spring.Restaurent.models.User;
+import app.spring.Restaurent.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import app.spring.tax.models.User;
+import app.spring.Restaurent.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

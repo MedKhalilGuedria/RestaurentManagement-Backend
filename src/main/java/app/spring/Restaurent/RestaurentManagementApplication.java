@@ -1,4 +1,4 @@
-package app.spring.tax;
+package app.spring.Restaurent;
 
 
 import org.springframework.boot.SpringApplication;
@@ -16,10 +16,10 @@ import static java.lang.Thread.sleep;
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @EnableScheduling
 
-public class TaxManagementApplication {
+public class RestaurentManagementApplication {
 
 	public static void main(String[] args) throws Exception{
-		SpringApplication.run(TaxManagementApplication.class, args);
+		SpringApplication.run(RestaurentManagementApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package app.spring.tax.services;
+package app.spring.Restaurent.services;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -7,10 +7,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import app.spring.tax.models.Notification;
-import app.spring.tax.models.User;
-import app.spring.tax.repository.NotificationRepository;
-import app.spring.tax.repository.UserRepository;
+import app.spring.Restaurent.models.Notification;
+import app.spring.Restaurent.models.User;
+import app.spring.Restaurent.repository.NotificationRepository;
+import app.spring.Restaurent.repository.UserRepository;
 @Service
 
 public class NotificationService {

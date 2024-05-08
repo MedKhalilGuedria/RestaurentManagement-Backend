@@ -1,4 +1,4 @@
-package app.spring.tax.config;
+package app.spring.Restaurent.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,7 +1,7 @@
-package app.spring.tax.services;
+package app.spring.Restaurent.services;
 
-import app.spring.tax.models.User;
-import app.spring.tax.repository.UserRepository;
+import app.spring.Restaurent.models.User;
+import app.spring.Restaurent.repository.UserRepository;
 
 import java.util.ArrayList;
 

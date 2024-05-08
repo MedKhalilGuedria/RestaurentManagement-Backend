@@ -1,4 +1,4 @@
-package app.spring.tax.dto;
+package app.spring.Restaurent.dto;
 
 public class AuthRequest {
 	

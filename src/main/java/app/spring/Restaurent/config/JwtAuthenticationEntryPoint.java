@@ -1,4 +1,4 @@
-package app.spring.tax.config;
+package app.spring.Restaurent.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

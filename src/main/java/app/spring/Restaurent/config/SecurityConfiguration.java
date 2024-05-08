@@ -1,6 +1,6 @@
-package app.spring.tax.config;
+package app.spring.Restaurent.config;
 
-import app.spring.tax.services.UserDetailsServiceImpl;
+import app.spring.Restaurent.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

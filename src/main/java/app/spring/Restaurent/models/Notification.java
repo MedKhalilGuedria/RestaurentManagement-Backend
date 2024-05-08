@@ -1,4 +1,4 @@
-package app.spring.tax.models;
+package app.spring.Restaurent.models;
 
 import java.time.LocalDateTime;
 
