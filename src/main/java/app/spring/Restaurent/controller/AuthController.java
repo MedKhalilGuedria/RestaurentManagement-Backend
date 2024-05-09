@@ -1,6 +1,7 @@
 package app.spring.Restaurent.controller;
 
 import app.spring.Restaurent.config.JwtUtil;
+import app.spring.Restaurent.dto.AuthResponse;
 import app.spring.Restaurent.models.User;
 import app.spring.Restaurent.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import app.spring.Restaurent.dto.AuthResponse;
 
 @RestController
 @RequestMapping("/auth")
@@ -37,7 +39,10 @@ public class AuthController {
 
         final UserDetails userDetails = userService.loadUserByUsername(authenticationRequest.getUsername());
         final String token = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(token);
+        final String role = userService.getUserRole(authenticationRequest.getUsername());
+        System.out.println(role);// Fetch user role
+        AuthResponse response = new AuthResponse(token, role);
+        return ResponseEntity.ok(response);
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
