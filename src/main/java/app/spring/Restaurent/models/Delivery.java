@@ -1,14 +1,19 @@
 package app.spring.Restaurent.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 
 @Entity
-public class Delivery {
-    @Id
+@Table (name = "delivery")
+public class Delivery implements Serializable {
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -16,9 +21,8 @@ public class Delivery {
     private String status;
     private int estimatedDeliveryTime;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne
     private Order order;
-
 	public String getDeliveryAddress() {
 		return deliveryAddress;
 	}

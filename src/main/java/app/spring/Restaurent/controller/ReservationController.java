@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import app.spring.Restaurent.models.Reservation;
-import app.spring.Restaurent.models.Table;
+import app.spring.Restaurent.models.TableEntity;
 import app.spring.Restaurent.models.User;
 import app.spring.Restaurent.repository.ReservationRepository;
 import app.spring.Restaurent.repository.TableRepository;
@@ -41,7 +41,7 @@ public class ReservationController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User not found");
         }
 
-        Table table = tableRepository.findById(tableId).orElse(null);
+        TableEntity table = tableRepository.findById(tableId).orElse(null);
         if (table == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Table not found");
         }

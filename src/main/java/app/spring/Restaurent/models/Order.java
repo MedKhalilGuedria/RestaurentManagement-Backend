@@ -6,13 +6,16 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Order {
-    @Id
+@Table (name = "ordertable")
+public class Order implements Serializable {
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -34,6 +37,14 @@ public class Order {
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public Delivery getDelivery() {
+		return delivery;
+	}
+
+	public void setDelivery(Delivery delivery) {
+		this.delivery = delivery;
 	}
 
 	public String getStatus() {

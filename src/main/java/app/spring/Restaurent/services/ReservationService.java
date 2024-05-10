@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import app.spring.Restaurent.models.Reservation;
-import app.spring.Restaurent.models.Table;
+import app.spring.Restaurent.models.TableEntity;
 import app.spring.Restaurent.models.User;
 import app.spring.Restaurent.repository.ReservationRepository;
 import app.spring.Restaurent.repository.TableRepository;
@@ -21,7 +21,7 @@ public class ReservationService {
     @Autowired
     private ReservationRepository reservationRepository;
 
-    public Reservation makeReservation(User user, Table table, Date reservationDate, int numberOfPeople) {
+    public Reservation makeReservation(User user, TableEntity table, Date reservationDate, int numberOfPeople) {
         // Vérifier si la table est disponible
         if (!table.isReserved()) {
             // Marquer la table comme réservée

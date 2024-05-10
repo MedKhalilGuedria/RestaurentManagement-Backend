@@ -1,12 +1,15 @@
 package app.spring.Restaurent.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.persistence.Table;
 
 @Entity
-public class Panier {
+@Table (name = "panier")
+public class Panier implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,7 +17,7 @@ public class Panier {
     @OneToOne
     private User user;
 
-    @OneToMany(mappedBy = "panier", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
     private List<PanierItem> items = new ArrayList<>();
 
 	public Panier(User user, List<PanierItem> items) {

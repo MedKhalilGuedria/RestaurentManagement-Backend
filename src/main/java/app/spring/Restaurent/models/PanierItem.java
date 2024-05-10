@@ -1,9 +1,13 @@
 package app.spring.Restaurent.models;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
+import javax.persistence.Table;
 
 @Entity
-public class PanierItem {
+@Table (name = "panieritem")
+public class PanierItem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

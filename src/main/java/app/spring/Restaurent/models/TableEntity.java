@@ -1,11 +1,13 @@
 package app.spring.Restaurent.models;
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Table {
+public class TableEntity implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -38,13 +40,13 @@ public class Table {
         this.reserved = reserved;
     }
 
-    public Table(int tableNumber, int capacity, boolean reserved) {
+    public TableEntity(int tableNumber, int capacity, boolean reserved) {
         this.tableNumber = tableNumber;
         this.capacity = capacity;
         this.reserved = reserved;
     }
 
     // Default constructor is needed for JPA
-    public Table() {
+    public TableEntity() {
     }
 }

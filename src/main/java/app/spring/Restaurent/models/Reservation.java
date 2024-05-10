@@ -5,10 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import app.spring.Restaurent.models.TableEntity;
+
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class Reservation {
+public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,7 +23,7 @@ public class Reservation {
     private User user;
 
     @ManyToOne
-    private Table table;
+    private TableEntity table;
 
 	public Date getReservationDate() {
 		return reservationDate;
@@ -46,11 +49,11 @@ public class Reservation {
 		this.user = user;
 	}
 
-	public Table getTable() {
+	public TableEntity getTable() {
 		return table;
 	}
 
-	public void setTable(Table table) {
+	public void setTable(TableEntity table) {
 		this.table = table;
 	}
     
